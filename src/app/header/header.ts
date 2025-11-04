@@ -44,7 +44,7 @@ interface NavItem {
         <a routerLink="/">
             <img src="/logo.png" alt="logo" class="media-screen-800:h-28 media-screen-800:w-36 w-24 h-16  object-contain">
         </a>
-        <div class="lg:hidden">
+        <div class="lg:hidden cursor-pointer">
           <i class="fa-solid fa-bars fa-2xl"
              (click)="toggleMenu()"
              style="color: currentColor;"></i>
@@ -351,7 +351,7 @@ interface NavItem {
             <button mat-menu-item>English</button>
             <button mat-menu-item>日本語</button>
           </mat-menu>
-          <div (click)="toggleMenu()">
+          <div class="cursor-pointer" (click)="toggleMenu()">
             <i class="fa-solid fa-x fa-xl" style="color:currentColor;"></i>
           </div>
         </div>
