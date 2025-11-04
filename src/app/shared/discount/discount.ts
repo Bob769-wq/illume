@@ -14,7 +14,7 @@ interface DiscountList {
     <div class="grid  media-screen-800:grid-cols-2 gap-2 px-6 py-10">
       @for (item of discountItem; track item.id) {
         <div class="overflow-hidden rounded-lg relative">
-          <img [src]="item.img" [alt]="item.title" />
+          <img [src]="item.img" class="w-full h-full object-cover" [alt]="item.title" />
           <a
             [routerLink]="item.link"
             class="absolute inset-0 bg-discount-hover flex justify-center items-center
