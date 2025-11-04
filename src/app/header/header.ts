@@ -1,4 +1,4 @@
-import { Component, signal, WritableSignal } from '@angular/core';
+import { Component, HostListener, signal, WritableSignal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatMenu, MatMenuItem, MatMenuTrigger } from '@angular/material/menu';
 interface NavItem {
