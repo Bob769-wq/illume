@@ -63,7 +63,7 @@ export class RoomType {
       title: '尊爵三人房',
       description:
         '這間全新裝修的客房最多可供三位旅客入住，欣賞城市和台北101的壯麗景色，體驗現代舒適。',
-      link: '/triple-room',
+      link: '/nav4/triple-room',
       img: '/menu04/02.webp',
     },
     {

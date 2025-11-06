@@ -564,10 +564,10 @@ export class Header {
   ];
   menuSub4: NavItem[] = [
     { id: 1, title: '尊爵客房', link: '/sub1', img: '/menu04/01.webp' },
-    { id: 2, title: '尊爵三人房', link: '/sub1', img: '/menu04/02.webp' },
+    { id: 2, title: '尊爵三人房', link: '/nav4/triple-room', img: '/menu04/02.webp' },
     { id: 3, title: '尊爵家庭房', link: '/sub1', img: '/menu04/03.webp' },
     { id: 4, title: '豪華套房', link: '/sub1', img: '/menu04/04.webp' },
-    { id: 5, title: '公寓式套房', link: '/sub1', img: '/menu04/05.webp' },
+    { id: 5, title: '公寓式套房', link: '/nav4/apartment', img: '/menu04/05.webp' },
     { id: 6, title: '行政套房', link: '/sub1', img: '/menu04/06.webp' },
     { id: 7, title: '標準客房（2017年裝修）', link: '/sub1', img: '/menu04/07.webp' },
     { id: 8, title: '尊爵套房', link: '/sub1', img: '/menu04/08.webp' },
@@ -579,12 +579,12 @@ export class Header {
     { id: 4, title: '活動需求表單', link: '/sub1' },
   ];
   menuSub7: NavItem[] = [
-    { id: 1, title: '尊爵客房', link: '/sub1', img: '/menu07/01.webp' },
-    { id: 2, title: '尊爵三人房', link: '/sub1', img: '/menu07/02.webp' },
-    { id: 3, title: '尊爵家庭房', link: '/sub1', img: '/menu07/03.webp' },
-    { id: 4, title: '豪華套房', link: '/sub1', img: '/menu07/04.webp' },
-    { id: 5, title: '公寓式套房', link: '/sub1', img: '/menu07/05.webp' },
-    { id: 6, title: '行政套房', link: '/sub1', img: '/menu07/06.webp' },
+    { id: 1, title: '01', link: '/sub1', img: '/menu07/01.webp' },
+    { id: 2, title: '02', link: '/sub1', img: '/menu07/02.webp' },
+    { id: 3, title: '03', link: '/sub1', img: '/menu07/03.webp' },
+    { id: 4, title: '04', link: '/sub1', img: '/menu07/04.webp' },
+    { id: 5, title: '05', link: '/sub1', img: '/menu07/05.webp' },
+    { id: 6, title: '06', link: '/sub1', img: '/menu07/06.webp' },
   ];
   menuSub8: NavItem[] = [
     { id: 1, title: '我們的故事', link: '/sub1' },
