@@ -21,6 +21,7 @@ module.exports = {
       },
       height: {
         420: '26.25rem',
+        800: '50rem',
       },
       maxHeight: {
         1000: '1000px',
@@ -38,6 +39,7 @@ module.exports = {
       },
       width: {
         500: '31.25rem',
+        1470: '91.875rem',
       },
     },
   },

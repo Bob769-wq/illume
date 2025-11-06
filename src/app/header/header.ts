@@ -72,7 +72,7 @@ interface NavItem {
                   <li class="text-base font-medium group relative"
                   (mouseenter)="showDropdown(item.title)" (mouseleave)="hideDropdown()"
                   >
-                    <a [routerLink]="item.link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="text-icon-hover font-bold" class="px-4 py-2 flex items-center gap-2">
+                    <a [routerLink]="item.link" routerLinkActive="text-icon-hover font-bold" class="px-4 py-2 flex items-center gap-2">
                       <span>{{item.title}}</span>
                       <span><i class="fa-solid fa-caret-down fa-xs" style="color: #1f3151;"></i></span>
                     </a>
@@ -177,7 +177,7 @@ interface NavItem {
                      <div class="flex flex-col cursor-pointer group"><a class="group-hover:opacity-80"><img src="/menu04/01.webp" class="rounded-md" alt="menu04" /></a>
                      <h4 class="text-xl text-center hover:text-hover-text">尊爵客房</h4>
                      </div>
-                     <div class="flex flex-col cursor-pointer group"><a class="group-hover:opacity-80"><img src="/menu04/02.webp" class="rounded-md" alt="menu04" /></a>
+                     <div class="flex flex-col cursor-pointer group"><a routerLink="/nav4/triple-room" class="group-hover:opacity-80"><img src="/menu04/02.webp" class="rounded-md" alt="menu04" /></a>
                      <h4 class="text-xl text-center hover:text-hover-text">尊爵三人房</h4>
                      </div>
                      <div class="flex flex-col cursor-pointer group"><a class="group-hover:opacity-80"><img src="/menu04/03.webp" class="rounded-md" alt="menu04" /></a>
@@ -186,7 +186,7 @@ interface NavItem {
                      <div class="flex flex-col cursor-pointer group"><a class="group-hover:opacity-80"><img src="/menu04/04.webp" class="rounded-md" alt="menu04" /></a>
                      <h4 class="text-xl text-center hover:text-hover-text">尊爵套房</h4>
                      </div>
-                     <div class="flex flex-col cursor-pointer group"><a class="group-hover:opacity-80"><img src="/menu04/05.webp" class="rounded-md" alt="menu04" /></a>
+                     <div class="flex flex-col cursor-pointer group"><a routerLink="/nav4/apartment" class="group-hover:opacity-80"><img src="/menu04/05.webp" class="rounded-md" alt="menu04" /></a>
                      <h4 class="text-xl text-center hover:text-hover-text">公寓式套房</h4>
                      </div>
                      <div class="flex flex-col cursor-pointer group"><a class="group-hover:opacity-80"><img src="/menu04/06.webp" class="rounded-md" alt="menu04" /></a>
@@ -531,7 +531,7 @@ export class Header {
     { id: 1, title: '探索台北', link: '/nav1' },
     { id: 2, title: '優惠專案', link: '/nav2' },
     { id: 3, title: '酒店公告', link: '/nav3' },
-    { id: 4, title: '客房與套房', link: '/triple-room' },
+    { id: 4, title: '客房與套房', link: '/nav4' },
     { id: 5, title: '餐飲饗宴', link: '/nav5' },
     { id: 6, title: '會議與活動', link: '/nav6' },
     { id: 7, title: '設施與服務', link: '/nav7' },

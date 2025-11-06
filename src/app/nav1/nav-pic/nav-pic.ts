@@ -14,8 +14,12 @@ import { Component } from '@angular/core';
         />
         <p class="text-center text-base py-1">客房光照</p>
       </div>
-      <div class="overflow-hidden rounded-xl cursor-pointer">
-        <img src="/nav-pic2.webp" alt="pic2" />
+      <div class="cursor-pointer">
+        <img
+          src="/nav-pic2.webp"
+          alt="pic2"
+          class="overflow-hidden w-full h-full object-cover rounded-xl"
+        />
         <p class="text-center text-base py-1">尊爵三人房</p>
       </div>
     </div>
