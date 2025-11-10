@@ -22,12 +22,12 @@ interface RoomHeroSection {
             {{ item().description }}
           </p>
           <div class="flex flex-col">
-            <div class="flex items-center gap-2">
+            <div class="flex flex-col sm:flex-row flex-row:items-center sm:gap-2">
               <div class="flex items-center gap-2">
                 <span><i class="fa-solid fa-clock fa-lg" style="color: #1c2d4a;"></i></span>
                 <p class="font-bold text-lg">16:00後辦理住房</p>
               </div>
-              <div class="h-6 w-0.5 bg-gray-400"></div>
+              <div class="h-6 w-0.5 bg-gray-400 hidden sm:block"></div>
               <div class="flex items-center gap-2">
                 <span><i class="fa-solid fa-clock fa-lg" style="color: #1c2d4a;"></i></span>
                 <p class="font-bold text-lg">11:00前辦理退房</p>
