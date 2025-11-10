@@ -33,9 +33,12 @@ module.exports = {
       },
       spacing: {
         'header-height': '176px',
+        800: '800px',
+        360: '360px',
       },
       maxWidth: {
         1200: '75rem',
+        500: '31.25rem',
       },
       width: {
         500: '31.25rem',

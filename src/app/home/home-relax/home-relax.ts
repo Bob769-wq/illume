@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Button } from '../../shared/button/button';
 interface RelaxList {
   id: number;
   title: string;
@@ -9,20 +10,24 @@ interface RelaxList {
 }
 @Component({
   selector: 'app-home-relax',
-  imports: [RouterLink],
+  imports: [RouterLink, Button],
   template: `
     <div class="flex justify-center py-12">
       <div class="text-4xl font-bold w-2/3">放鬆充電 – 尊享頂級設施</div>
     </div>
     <div class="px-6">
-      <div class="flex h-[37.5rem]">
+      <div class="flex flex-col media-screen-800:flex-row h-[37.5rem]">
         @for (item of relaxItem; track item.id; let i = $index) {
           <div class="relative group rounded-xl overflow-hidden">
-            <img [src]="item.img" class="h-full object-cover flex-1 min-w-0" [alt]="item.title" />
+            <img
+              [src]="item.img"
+              class="h-full w-full object-cover flex-1 min-w-0"
+              [alt]="item.title"
+            />
             <div
               class="absolute inset-0 bg-black group-hover:opacity-30 opacity-0 transition-opacity duration-500"
             ></div>
-            <div class="absolute top-1/2 left-4  group-hover:flex flex-col justify-center hidden">
+            <div class="absolute inset-0 left-5 group-hover:flex flex-col justify-center hidden">
               <h4 class="text-white  text-xl font-bold">{{ item.title }}</h4>
               <p class="text-white">{{ item.description }}</p>
               <a
@@ -35,13 +40,7 @@ interface RelaxList {
         }
       </div>
       <div class="flex justify-center py-4">
-        <a
-          routerLink="/room"
-          class="flex items-center gap-2 py-1 px-5 bg-button-bg rounded-md shadow-xl hover:scale-110 transition-all duration-500"
-        >
-          <span><i class="fa-solid fa-calendar" style="color: currentColor;"></i></span>
-          <span class="font-bold text-base">探索所有房型</span>
-        </a>
+        <app-button label="探索更多設施" />
       </div>
     </div>
   `,

@@ -19,7 +19,9 @@ interface Rating {
       <div class="grid grid-cols-2 media-screen-800:grid-cols-5 gap-3 pt-12 pb-6">
         @for (item of reasonItem; track item.id) {
           <div class="flex flex-col gap-3 items-center">
-            <span><i [class]="item.img" style="color: currentColor"></i></span>
+            <span class="hover:text-icon-hover"
+              ><i [class]="item.img" style="color: currentColor"></i
+            ></span>
             <div class="text-center">
               <h3 class="font-bold text-lg">{{ item.title }}</h3>
               <p class="text-lg max-w-56">{{ item.description }}</p>
@@ -29,7 +31,7 @@ interface Rating {
       </div>
     </div>
     <div class="bg-icon-hover py-2 px-4">
-      <div class="flex items-center justify-between">
+      <div class="md:flex items-center justify-between hidden">
         <div class="flex items-center gap-2 pr-4 border-r border-r-black">
           <p class="text-2xl">4.1<span class="text-sm">/5</span></p>
           <div class="flex flex-col">
@@ -43,9 +45,29 @@ interface Rating {
             <p class="text-2xl">{{ item.rated }}<span class="text-sm">/10</span></p>
           </div>
         }
-        <a
-          class="border border-black rounded-md flex justify-center items-center w-fit h-fit py-1 px-2"
-        >
+
+        <a class="border border-black rounded-md flex justify-center items-center py-1 px-2">
+          閱讀評論
+        </a>
+      </div>
+
+      <div class="flex flex-col gap-2 md:hidden">
+        <div class="flex items-center justify-center gap-2">
+          <p class="text-2xl">4.1<span class="text-sm">/5</span></p>
+          <div class="flex flex-col">
+            <p class="font-bold">很好</p>
+            <p>基於9053評論</p>
+          </div>
+        </div>
+        <div class="flex justify-between">
+          @for (item of ratingItem; track item.id) {
+            <div class="flex flex-col">
+              <h4 class="text-base">{{ item.title }}</h4>
+              <p class="text-2xl">{{ item.rated }}<span class="text-sm">/10</span></p>
+            </div>
+          }
+        </div>
+        <a class="border border-black rounded-md flex justify-center items-center py-1 px-2">
           閱讀評論
         </a>
       </div>

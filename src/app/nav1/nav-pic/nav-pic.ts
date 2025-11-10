@@ -1,29 +1,19 @@
 import { Component } from '@angular/core';
-
+import { RoomTypePicFrame } from '../../shared/room-type-pic-frame/room-type-pic-frame';
+interface Room {
+  id: number;
+  title: string;
+  img: string;
+}
 @Component({
   selector: 'app-nav-pic',
-  imports: [],
-  template: `
-    <h2 class="text-4xl font-bold px-6 py-2.5">客房照片</h2>
-    <div class="grid  media-screen-800:grid-cols-2 gap-4 px-6 py-8">
-      <div class="cursor-pointer">
-        <img
-          src="/nav-pic1.webp"
-          alt="pic1"
-          class="overflow-hidden w-full h-full object-cover rounded-xl"
-        />
-        <p class="text-center text-base py-1">客房光照</p>
-      </div>
-      <div class="cursor-pointer">
-        <img
-          src="/nav-pic2.webp"
-          alt="pic2"
-          class="overflow-hidden w-full h-full object-cover rounded-xl"
-        />
-        <p class="text-center text-base py-1">尊爵三人房</p>
-      </div>
-    </div>
-  `,
+  imports: [RoomTypePicFrame],
+  template: ` <app-room-type-pic-frame [items]="roomItem" /> `,
   styles: ``,
 })
-export class NavPic {}
+export class NavPic {
+  roomItem: Room[] = [
+    { id: 1, img: '/nav-pic1.webp', title: '客房光照' },
+    { id: 2, img: '/nav-pic2.webp', title: '尊爵三人房' },
+  ];
+}

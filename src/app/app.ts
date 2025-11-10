@@ -1,6 +1,6 @@
 import { Component, HostListener, signal } from '@angular/core';
-import { Header } from './header/header';
-import { Footer } from './footer/footer';
+import { Header } from './shared/header/header';
+import { Footer } from './shared/footer/footer';
 import { RouterOutlet } from '@angular/router';
 
 @Component({

@@ -31,16 +31,20 @@ interface ChildrenList {
           </li>
           <ul
             class="overflow-hidden transition-all duration-500 ease-in-out"
-            [class]="item.isExpanded ? 'max-h-96' : 'max-h-0'"
+            [class]="item.isExpanded ? 'max-h-1000' : 'max-h-0'"
           >
             @for (child of item.children; track child.id; let last = $last) {
               <li
                 class="text-base px-4 py-2 flex gap-1"
                 [class]="last ? 'border-b' : 'border-none'"
               >
-                <a [routerLink]="child.link" class="underline">{{ child.title }}</a>
-                <span>:</span>
-                <span>{{ child.description }}</span>
+                <!--                <a [routerLink]="child.link" class="underline flex-shrink-0">{{ child.title }}</a>-->
+                <!--                <span>:</span>-->
+                <!--                <span>{{ child.description }}</span>-->
+                <div>
+                  <a [routerLink]="child.link" class="underline">{{ child.title }}</a>
+                  <span>: {{ child.description }}</span>
+                </div>
               </li>
             }
           </ul>

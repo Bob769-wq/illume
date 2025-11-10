@@ -21,8 +21,8 @@ interface UserList {
         </p>
       </div>
       <div class="border rounded-2xl px-4 py-2 shadow-md">
-        <div class="flex justify-between">
-          <div class="flex items-center gap-2">
+        <div class="flex flex-col sm:flex-row sm:justify-between">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-2">
             <img src="/experience/google.svg" class="w-20" alt="google" />
             <span class="font-bold text-base">Good</span>
             <div class="flex">
@@ -34,15 +34,21 @@ interface UserList {
           </div>
           <a
             class="border p-2 border-black rounded-md bg-icon-hover
-            cursor-pointer hover:text-white hover:bg-black"
+            cursor-pointer hover:text-white hover:bg-black self-start"
           >
             <span>😀 邀請您撰寫評論</span>
           </a>
         </div>
       </div>
-      <div class="grid grid-cols-4 gap-3 py-4">
-        @for (item of userItem; track item.id) {
-          <div class="rounded-xl border shadow-md p-4">
+      <div class="grid media-screen-800:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 py-4">
+        @for (item of userItem; track item.id; let i = $index) {
+          <div
+            class="rounded-xl border shadow-md p-4"
+            [class.hidden]="i >= 1"
+            [class.media-screen-800:block]="i >= 1 && i < 2"
+            [class.lg:block]="i >= 1 && i < 3"
+            [class.xl:block]="i >= 1 && i < 4"
+          >
             <div class="flex flex-col">
               <div class="flex items-center gap-2">
                 <div class="w-10 h-10 rounded-full bg-icon-hover flex justify-center items-center">

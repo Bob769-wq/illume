@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Button } from '../../shared/button/button';
 interface RoomList {
   id: number;
   title: string;
@@ -9,13 +10,17 @@ interface RoomList {
 }
 @Component({
   selector: 'app-room-type',
-  imports: [RouterLink],
+  imports: [RouterLink, Button],
   template: `
     <div class="px-6">
       <h2 class="font-bold text-4xl text-center py-16">全新客房與套房</h2>
       <div class="grid grid-cols-2 media-screen-800:grid-cols-3 gap-6">
-        @for (item of roomItem; track item.id) {
-          <div class="flex flex-col gap-2">
+        @for (item of roomItem; track item.id; let i = $index) {
+          <div
+            class="flex flex-col gap-2"
+            [class.hidden]="i >= 2"
+            [class.media-screen-800:flex]="i >= 2"
+          >
             <a [routerLink]="item.link">
               <img
                 [src]="item.img"
@@ -36,13 +41,7 @@ interface RoomList {
         }
       </div>
       <div class="flex justify-center py-2">
-        <a
-          routerLink="/room"
-          class="flex items-center gap-2 py-1 px-5 bg-button-bg rounded-md shadow-xl hover:scale-110 transition-all duration-500"
-        >
-          <span><i class="fa-solid fa-calendar" style="color: currentColor;"></i></span>
-          <span class="font-bold text-base">探索所有房型</span>
-        </a>
+        <app-button label="探索所有房型" />
       </div>
     </div>
   `,

@@ -7,11 +7,13 @@ interface ServiceList {
 @Component({
   selector: 'app-home-service',
   imports: [],
-  template: `<h2 class="text-4xl font-bold text-center my-12">酒店資訊 ＆ 貴賓服務</h2>
-    <div class="grid gap-3 media-screen-800:gap-0 media-screen-800:grid-cols-3 lg:grid-cols-5 py-8">
-      @for (item of serviceItem; track item.id) {
-        <div class="flex flex-col">
-          <h3 class="text-4xl font-bold">{{ item.title }}</h3>
+  template: `<h2 class="text-4xl font-bold media-screen-800:text-center my-12 px-2">
+      酒店資訊 ＆ 貴賓服務
+    </h2>
+    <div class="grid gap-3 px-2 media-screen-800:grid-cols-5 py-8">
+      @for (item of serviceItem; track item.id; let i = $index) {
+        <div class="flex flex-col" [class.hidden]="i >= 1" [class.media-screen-800:flex]="i >= 1">
+          <h3 class="text-3xl font-bold">{{ item.title }}</h3>
           <ul class="list-disc ml-12">
             @for (child of item.children; track child.id) {
               <li class="text-base">{{ child.title }}</li>
